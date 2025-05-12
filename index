@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문을 열어다오...</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      position: relative;
+      width: 800px;
+      height: 600px;
+      text-align: center;
+      color: white;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #hiddenImage {
+      display: none;
+    }
+
+    #dingdongText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      font-weight: bold;
+      opacity: 0;
+      transition: opacity 1s ease;
+      z-index: 1;
+    }
+
+    #doorIcon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: auto;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="hiddenImage" src="Ding_dong.png" alt="이미지">
+    <div id="dingdongText">딩-동</div>
+    <img id="doorIcon" src="Door.png" alt="문" onclick="revealText()">
+  </div>
+
+  <script>
+    function revealText() {
+      document.getElementById('dingdongText').style.opacity = 1;
+    }
+  </script>
+</body>
+</html>
