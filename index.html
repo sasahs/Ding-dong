@@ -60,7 +60,11 @@
 
   <script>
     function revealText() {
-      document.getElementById('dingdongText').style.opacity = 1;
+      const text = document.getElementById('dingdongText');
+      text.style.opacity = 1;
+      setTimeout(() => {
+        text.style.opacity = 0;
+      }, 4000);
     }
   </script>
 </body>
